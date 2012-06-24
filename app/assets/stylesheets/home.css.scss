@@ -4,10 +4,62 @@
 
 
 html, body{height:100%;}
-body{background-color:black}
-.border{border:1px solid black;}
+body{
+	background-color:black;
+	heigh:100%;
+}
+.border{border:1px solid white;}
 
-#head-banner{text-align:center;position:relative;}
-#main-content{background-color:#EEEEEE;height:500px;margin-bottom: 50px;}
+.container{height:900px}
+.container > div{
+	text-align:center;
+}
 
-#login-links{position:absolute;top:5px;right:5px;}
+.title{
+	color:#AB1300;
+	font-family: 'Bank Gothic','Arial-Black','Arial Black','Arial-Black','Arial Black',sans-serif;
+	font-size: 45px;
+}
+#links_header{padding:20px 0 50px}
+#links_header > ul > li{
+	display:inline-block;
+	padding:0 20px;
+}
+#links_header > ul > li > a{
+	font-size: 22px;
+	text-decoration:underline;	
+}
+#links_header > ul > li > a:hover{
+	color:#BEBEBE;
+}
+
+/*IMAGE AND ABOUT US*/
+
+#about_us > p{
+	text-align:center;
+	width:759px;
+	margin:0 auto;
+}
+.soprime_font{
+	color: #AB1500;
+    font-family: 'Bank Gothic','Arial-Black','Arial Black',sans-serif;
+    font-size: 18px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 31px;
+	padding:0 72px;
+}
+/*END*/
+
+/*Footer*/
+#contact_information{
+	margin-top:100px;
+}
+#contact_information > a{
+	display:block;
+	font-size:20px;
+	padding:5px 0;
+}
+/*END*/

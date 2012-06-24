@@ -8,15 +8,6 @@
 </head>
 <body>
 	<div class="container">
-		<div class="hero-unit" id="head-banner">
-			<h1>SoPrime WebApp</h1>
-			<%if user_signed_in?%>
-				<%=link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "btn btn-danger", :id => "login-links"%>
-			<%else%>
-				<%=link_to "Sign In", new_user_session_path, :class => "btn btn-success", :id => "login-links"%>
-			
-			<%end%>
-		</div>
 		<%= yield %>
 	</div>
 

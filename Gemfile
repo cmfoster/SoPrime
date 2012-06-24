@@ -5,6 +5,7 @@ gem 'devise'
 gem 'sqlite3'
 gem "twitter-bootstrap-rails"
 gem 'simple_form'
+gem 'haml'
 
 
 group :assets do
