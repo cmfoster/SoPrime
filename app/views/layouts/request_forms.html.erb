@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soprime Entertainment</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	<%= "<p class='notice'> #{notice}</p>".html_safe if notice %> <!-- FOR DEVISE NOTICE -->
+	<%= "<p class='alert'> #{alert}</p>".html_safe if alert %>
+</head>
+<body>
+	<div class="container">
+		<%= yield %>
+	</div>
+
+</body>
+</html>

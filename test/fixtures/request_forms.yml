@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fname: MyString
+  lname: MyString
+  event_type: MyString
+  start_time: 2012-05-31 00:41:19
+  end_time: 2012-05-31 00:41:19
+  event_city: MyString
+  event_state: MyString
+  phone: 1
+  email: MyString
+
+two:
+  fname: MyString
+  lname: MyString
+  event_type: MyString
+  start_time: 2012-05-31 00:41:19
+  end_time: 2012-05-31 00:41:19
+  event_city: MyString
+  event_state: MyString
+  phone: 1
+  email: MyString

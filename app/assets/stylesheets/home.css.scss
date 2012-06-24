@@ -1,0 +1,13 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html, body{height:100%;}
+body{background-color:black}
+.border{border:1px solid black;}
+
+#head-banner{text-align:center;position:relative;}
+#main-content{background-color:#EEEEEE;height:500px;margin-bottom: 50px;}
+
+#login-links{position:absolute;top:5px;right:5px;}
