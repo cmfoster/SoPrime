@@ -15,10 +15,17 @@ body{
 	text-align:center;
 }
 
-.title{
+.logo{
 	color:#AB1300;
 	font-family: 'Bank Gothic','Arial-Black','Arial Black','Arial-Black','Arial Black',sans-serif;
 	font-size: 45px;
+}
+.page_name > h1{
+	color:#FFF;
+	font-family: 'Cochin','Times New Roman',serif;
+	font-size: 40px;
+	font-weight:600;
+	margin-bottom:50px;
 }
 #links_header{padding:20px 0 50px}
 #links_header > ul > li{
@@ -61,5 +68,28 @@ body{
 	display:block;
 	font-size:20px;
 	padding:5px 0;
+}
+/*END*/
+
+/*WEDDINGS*/
+
+#left_img_column{
+	width:300px;
+}
+#right_img_column{
+	width:300px;
+	margin: 0 auto;
+	
+}
+#center_info_column{
+	width:560px;
+	margin: 0 auto;	
+}
+#center_info_column > p{
+	color: #FFFFFF;
+    font-family: 'ArialMT','Arial',sans-serif;
+    font-size: 15px;
+	word-wrap: break-word;
+	margin-top:150px;
 }
 /*END*/
