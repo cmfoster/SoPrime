@@ -7,8 +7,9 @@
 	%p.soprime_font (630) 441 2506
 	%a.email{:href => "mailto:Chris@SoPrimeEntertainment.com"} Chris@SoPrimeEntertainment.com
 	%a.email{:href => "mailto:Justin@SoPrimeEntertainment.com"} Justin@SoPrimeEntertainment.com
-	- if current_page?(weddings_path)
+	- if !current_page?(root_path)
 		= link_to "back to DJ Services", root_path, :style => "margin-top: 30px"
+	- if current_page?(weddings_path)
 		%a{:href => "http://www.facebook.com/SoPrimeEntertainment", :target => "_blank", :id => "facebook_logo"}
 			= image_tag("facebook.png")
 		%a{:href => "http://www.facebook.com/SoPrimeEntertainment", :target => "_blank", :id => "mywedding_logo"}

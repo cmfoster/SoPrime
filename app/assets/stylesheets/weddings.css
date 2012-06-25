@@ -1,0 +1,30 @@
+/*WEDDINGS*/
+
+#left_img_column{
+	width:300px;
+}
+#right_img_column{
+	width:300px;
+	margin: 0 auto;
+	
+}
+#center_info_column{
+	width:560px;
+	margin: 0 auto;	
+}
+#center_info_column > p{
+	color: #000000;
+    font-family: 'ArialMT','Arial',sans-serif;
+    font-size: 15px;
+	word-wrap: break-word;
+	margin-top:150px;
+}
+#wedding_links > ul > li{
+	display:inline-block;
+	padding: 0 20px;
+}
+#wedding_links > ul > li > a{
+	font-size: 22px;
+	text-decoration:underline;
+}
+/*END*/

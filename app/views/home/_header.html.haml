@@ -1,13 +1,31 @@
-%div
-	%h1.logo
-		SoPrime Entertainment	
-#links_header
-	%ul.unstyled
-		%li 
-			%a Dances
-		%li
-			%a Parties
-		%li
-			=link_to 'Weddings',  weddings_path
-		%li
-			%a Clubs
+%div{:style => "position:relative"}
+	- if current_page?(weddings_path)
+		%ul.unstyled.social_links
+			%li
+				%a{:href => "http://www.facebook.com/SoPrimeEntertainment"}
+					= image_tag("facebook1.png")
+			%li
+				%a
+					= image_tag("twitter1.png")
+		= image_tag("soprime-weddings.png", :id => "wedding-logo")
+	- else
+		%h1.logo
+			SoPrime Entertainment
+- if current_page?(weddings_path)
+	#wedding_links
+		%ul.unstyled
+			%li
+				%a About our service
+			%li
+				%a Put something here
+- else
+	#links_header
+		%ul.unstyled
+			%li 
+				%a Dances
+			%li
+				%a Parties
+			%li
+				= link_to 'Weddings',  weddings_path
+			%li
+				= link_to "Clubs", clubs_path

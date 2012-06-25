@@ -6,7 +6,7 @@
 html, body{height:100%;}
 body{
 	background-color:black;
-	heigh:100%;
+	height:100%;
 }
 .border{border:1px solid white;}
 
@@ -89,25 +89,26 @@ body{
 }
 /*END*/
 
-/*WEDDINGS*/
+/*CLUB*/
+#club_images{
+	position:relative;
+}
 
-#left_img_column{
-	width:300px;
+#club_images > img{
+	display:block;
+	margin:0 auto;
 }
-#right_img_column{
-	width:300px;
-	margin: 0 auto;
-	
+/*END*/
+
+/*SOCIAL LINKS*/
+.social_links{
+	margin-right:160px;
+	position:absolute;
+	top:10px;
+	right:5px;
 }
-#center_info_column{
-	width:560px;
-	margin: 0 auto;	
-}
-#center_info_column > p{
-	color: #FFFFFF;
-    font-family: 'ArialMT','Arial',sans-serif;
-    font-size: 15px;
-	word-wrap: break-word;
-	margin-top:150px;
+.social_links > li{
+	display:inline-block;
+	padding:0 0 0 15px;
 }
 /*END*/
