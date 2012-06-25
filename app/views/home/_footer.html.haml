@@ -1,0 +1,15 @@
+#contact_information
+	- if current_page?(weddings_path)
+		%p.footer_font 
+			we can help you with ANY question you may have about your wedding!
+		%p.footer_font 
+			contact us to schedule a free consultation
+	%p.soprime_font (630) 441 2506
+	%a.email{:href => "mailto:Chris@SoPrimeEntertainment.com"} Chris@SoPrimeEntertainment.com
+	%a.email{:href => "mailto:Justin@SoPrimeEntertainment.com"} Justin@SoPrimeEntertainment.com
+	- if current_page?(weddings_path)
+		= link_to "back to DJ Services", root_path, :style => "margin-top: 30px"
+		%a{:href => "http://www.facebook.com/SoPrimeEntertainment", :target => "_blank", :id => "facebook_logo"}
+			= image_tag("facebook.png")
+		%a{:href => "http://www.facebook.com/SoPrimeEntertainment", :target => "_blank", :id => "mywedding_logo"}
+			= image_tag("mywedding.png")

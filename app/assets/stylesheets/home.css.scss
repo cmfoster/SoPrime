@@ -62,12 +62,30 @@ body{
 
 /*Footer*/
 #contact_information{
-	margin-top:100px;
+	margin:100px 0;
+	position:relative;
+}
+.footer_font{
+	color: #FFFFFF;
+    font-family: 'BankGothic-Medium','Bank Gothic','Arial',sans-serif;
+    font-size: 18px;
+	margin-bottom:20px;
+    font-weight: 500;
 }
 #contact_information > a{
 	display:block;
 	font-size:20px;
 	padding:5px 0;
+}
+#facebook_logo{
+	position:absolute;
+	right:100px;
+	top:70px;
+}
+#mywedding_logo{
+	position:absolute;
+	left:100px;
+	top:40px;
 }
 /*END*/
 
