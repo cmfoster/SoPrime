@@ -7,7 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
+	<%if current_page?(weddings_path)%>
+		<style>
+			body{background-color:#FFF;padding-top:0}
+		</style>
+	<%end%>
+		<div id="top_nav">
+			<div class="container">
+				<ul class="unstyled top_nav_links">
+					<li>
+						<div class="overlay"></div>
+						<a> (something)</a>
+					</li>
+					<li>
+						<div class="overlay"></div>
+						<a> (something)</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<div class="container" id="main_container">
 		<%=render :partial => "header"%>
 		<%= yield %>
 	</div>

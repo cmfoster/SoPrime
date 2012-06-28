@@ -27,4 +27,30 @@
 	font-size: 22px;
 	text-decoration:underline;
 }
+#top_nav{
+	background-color:#EEE;
+	height:50px;
+	margin:0 auto;
+}
+#top_nav > .container, .top_nav_links{
+	height:100%;
+}
+.top_nav_links > li	{
+	height:100%;
+	width:90px;
+	z-index:1;
+	position:relative;
+	overflow:hidden;
+}
+.top_nav_links > li > a{
+	margin:0 auto;
+}
+.overlay{
+	z-index: -1;
+	position:absolute;
+	height: 110%;
+	width:110%;
+	background-color:black;
+	opacity:.6;
+}
 /*END*/

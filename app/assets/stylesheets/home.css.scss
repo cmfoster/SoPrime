@@ -10,8 +10,8 @@ body{
 }
 .border{border:1px solid white;}
 
-.container{height:900px}
-.container > div{
+#main_container{height:900px}
+#main_container > div{
 	text-align:center;
 }
 
@@ -107,7 +107,7 @@ body{
 	top:10px;
 	right:5px;
 }
-.social_links > li{
+.social_links > li, .top_nav_links > li{
 	display:inline-block;
 	padding:0 0 0 15px;
 }
