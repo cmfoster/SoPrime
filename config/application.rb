@@ -55,5 +55,9 @@ module Soprime
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    #Manual precompile
+    config.assets.precompile += ['*.js'];
+    config.assets.precompile += ['*.css'];
   end
 end

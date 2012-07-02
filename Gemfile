@@ -8,6 +8,9 @@ gem 'simple_form'
 gem 'haml'
 gem 'capistrano'
 
+group :production do
+  gem 'rvm-capistrano'
+end
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
