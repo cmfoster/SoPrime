@@ -106,8 +106,9 @@ body{
 	position:absolute;
 	top:10px;
 	right:5px;
+	z-index:1000;
 }
-.social_links > li, .top_nav_links > li{
+.social_links > li{
 	display:inline-block;
 	padding:0 0 0 15px;
 }

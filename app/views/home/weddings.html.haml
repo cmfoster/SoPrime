@@ -1,33 +1,74 @@
-.page_name
-	%h1 Custom Wedding Service
-	= image_tag("top_img.jpg")
-#weddings.row
-	#left_img_column.span3
-		= image_tag("speech.jpg")
-		= image_tag("toast.jpg")
-		= image_tag("requests.jpg")
-		= image_tag("droppedimage4.jpg")
-		= image_tag("more_dancing.jpg")
-		= image_tag("girldancing.jpg")
-	#center_info_column.span3
-		%p
-			SoPrime Entertainment offers exceptional wedding reception entertainment at a price that can’t be beat. It starts with our free consultation where we meet to get a better understanding of your expectations. We then develop a comprehensive itinerary that will be tailored to your event, and easily modified at any time. Our DJ will make suggestions, and you may submit requests; Together you and the DJ will walk through the music that will be played throughout your reception. Our custom itinerary determines your event's specific needs and ensures no detail is overlooked.
-		%p
-			We know every reception is unique. Whatever environment you would like to create, our custom professional sound and lighting setup ensures that your event receives the appropriate equipment for its needs. Throughout cocktail and dinner hour sound can be evenly dispersed throughout the room; during the later portion of the evening sound can be focused on the dance floor.
-		%p
-			From the time guests arrive we will provide music based on your preferences, and appropriate for your entire guest list. With our wireless microphone, toasts and speeches can be  made from anywhere and heard everywhere. Our MC will be responsible for making announcements, wedding party introductions, and coordination between vendors, helping the whole night run smoothy.
-		%p
-			After Dinner, you can rest easy knowing your guests will be having a great time enjoying the music and dancing portion of your reception. Our professional DJs are passionate about what they do, and their experience coupled with a virtually unlimited library of music ensures a superb music set for every event. We create a customized selection of dance music based upon your personal preferences. It will be mixed together with our DJs recommendations and your guest’s appropriate requests live at your event. Our MC can smoothly incorporate your special dances, presentations or anything else into the dancing portion of the evening
-		%p
-			Our goal is for you and your guests to have a great experience. We will be your hosts, create an inviting atmosphere with music on the dance floor, and embrace your creativity and personal style to make your reception truly your own. Our custom services are always provided with the fundamentals you expect; professional sound and lighting equipment, an ever-expanding library of the best music, and fun, professional DJ’s and MC’s. From your initial consultation, until the last song of your reception, we are here for you when you need us.
+#soprime_wedding_container
+	%ul.unstyled.social_links
+		%li
+			%a{:href => "http://www.facebook.com/SoPrimeEntertainment"}
+				= image_tag("facebook1.png")
+		%li
+			%a
+				= image_tag("twitter1.png")
+	= image_tag("weddingbackground.png", :id => "wedding-logo")
+	
+	-# ANIMATED FROM 0 TO 0.6 OPACITY WHEN NAV BUTTON CLICKED
+	.overlay
+	
+	#menu_content_container
+		#our_services_container.hide
+			.our_services.menu_content_div
+				%h6 Our services
+				%p{:style=>"color:#FFF"}
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
 		
-	#right_img_column.span3
-		= image_tag("setup.jpg")
-		= image_tag("introductions.jpg")
-		= image_tag("droppedimage2.jpg")
-		= image_tag("dancing.jpg")
-		= image_tag("droppedimage.jpg")
-%div
-	= image_tag("overshot.jpg")
-= render :partial => "footer"
+	
+
+
+
+
+
+
+:javascript
+	$(".menu-tab > a").click(function(){
+		var target_div = $(this).attr('div_tag');
+		$(target_div).css('margin-left', '2000px');
+		$('#soprime_wedding_container > .overlay').animate({opacity: 0.6}, 1500);
+		$(target_div).show();
+		$(target_div).animate({'margin-left': 0}, 1500);
 		
+	});
+
+
+
+
+-# .page_name
+-# 	%h1 Custom Wedding Service
+-# 	= image_tag("top_img.jpg")
+-# #weddings.row
+-# 	#left_img_column.span3
+-# 		= image_tag("speech.jpg")
+-# 		= image_tag("toast.jpg")
+-# 		= image_tag("requests.jpg")
+-# 		= image_tag("droppedimage4.jpg")
+-# 		= image_tag("more_dancing.jpg")
+-# 		= image_tag("girldancing.jpg")
+-# 	#center_info_column.span3
+-# 		%p
+-# 			SoPrime Entertainment offers exceptional wedding reception entertainment at a price that can’t be beat. It starts with our free consultation where we meet to get a better understanding of your expectations. We then develop a comprehensive itinerary that will be tailored to your event, and easily modified at any time. Our DJ will make suggestions, and you may submit requests; Together you and the DJ will walk through the music that will be played throughout your reception. Our custom itinerary determines your event's specific needs and ensures no detail is overlooked.
+-# 		%p
+-# 			We know every reception is unique. Whatever environment you would like to create, our custom professional sound and lighting setup ensures that your event receives the appropriate equipment for its needs. Throughout cocktail and dinner hour sound can be evenly dispersed throughout the room; during the later portion of the evening sound can be focused on the dance floor.
+-# 		%p
+-# 			From the time guests arrive we will provide music based on your preferences, and appropriate for your entire guest list. With our wireless microphone, toasts and speeches can be  made from anywhere and heard everywhere. Our MC will be responsible for making announcements, wedding party introductions, and coordination between vendors, helping the whole night run smoothy.
+-# 		%p
+-# 			After Dinner, you can rest easy knowing your guests will be having a great time enjoying the music and dancing portion of your reception. Our professional DJs are passionate about what they do, and their experience coupled with a virtually unlimited library of music ensures a superb music set for every event. We create a customized selection of dance music based upon your personal preferences. It will be mixed together with our DJs recommendations and your guest’s appropriate requests live at your event. Our MC can smoothly incorporate your special dances, presentations or anything else into the dancing portion of the evening
+-# 		%p
+-# 			Our goal is for you and your guests to have a great experience. We will be your hosts, create an inviting atmosphere with music on the dance floor, and embrace your creativity and personal style to make your reception truly your own. Our custom services are always provided with the fundamentals you expect; professional sound and lighting equipment, an ever-expanding library of the best music, and fun, professional DJ’s and MC’s. From your initial consultation, until the last song of your reception, we are here for you when you need us.
+-# 		
+-# 	#right_img_column.span3
+-# 		= image_tag("setup.jpg")
+-# 		= image_tag("introductions.jpg")
+-# 		= image_tag("droppedimage2.jpg")
+-# 		= image_tag("dancing.jpg")
+-# 		= image_tag("droppedimage.jpg")
+-# %div
+-# 	= image_tag("overshot.jpg")
+-# = render :partial => "footer"
+-# 		

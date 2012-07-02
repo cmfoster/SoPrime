@@ -1,31 +1,52 @@
-%div{:style => "position:relative"}
-	- if current_page?(weddings_path)
-		%ul.unstyled.social_links
-			%li
-				%a{:href => "http://www.facebook.com/SoPrimeEntertainment"}
-					= image_tag("facebook1.png")
-			%li
-				%a
-					= image_tag("twitter1.png")
-		= image_tag("weddingbackground.png", :id => "wedding-logo")
-	- else
+- if current_page?(weddings_path)
+	:css
+		body{background-color:#FFF;padding-top:0;overflow:hidden;}
+		#main_container{height:auto}
+		#soprime_wedding_container{position:relative;margin-top:60px;}
+		#soprime_wedding_container > .overlay{opacity:0}
+		#menu_content_container{height:400px;width:900px;position:absolute;top:0;left:150px;padding:25px 0}
+		.menu_content_div{border:1px solid #FFF;border-radius:4px}
+		.our_services{height:370px;width:250px;margin-right:20px}
+	#side_nav
+		%ul.unstyled.top_nav_links
+			%li.menu-tab
+				.overlay
+				%a{:div_tag=>"#our_services_container"}
+					Our service
+			%li.menu-tab
+				.overlay
+				%a{:div_tag=>"#gallery"}
+					Gallery
+			%li.menu-tab
+				.overlay
+				%a{:div_tag=>"#testimonials"}
+					Testimonials
+			%li.menu-tab
+				.overlay
+				%a{:div_tag=>"#our_djs"}
+					DJ's
+			%li.menu-tab
+				.overlay
+				%a{:div_tag=>"#cost_quality"}
+					Cost Vs Quality
+			%li.menu-tab
+				.overlay
+				%a{:div_tag=>"#book_us"}
+					Book Us
+
+- else
+	%div{:style => "position:relative;"}
+
 		%h1.logo
 			SoPrime Entertainment
-- if current_page?(weddings_path)
-	#wedding_links
-		%ul.unstyled
-			%li
-				%a About our service
-			%li
-				%a Put something here
-- else
-	#links_header
-		%ul.unstyled
-			%li 
-				%a Dances
-			%li
-				%a Parties
-			%li
-				= link_to 'Weddings',  weddings_path
-			%li
-				= link_to "Clubs", clubs_path
+
+		#links_header
+			%ul.unstyled
+				%li 
+					%a Dances
+				%li
+					%a Parties
+				%li
+					= link_to 'Weddings',  weddings_path
+				%li
+					= link_to "Clubs", clubs_path
