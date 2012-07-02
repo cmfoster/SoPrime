@@ -6,6 +6,7 @@ gem 'sqlite3'
 gem "twitter-bootstrap-rails"
 gem 'simple_form'
 gem 'haml'
+gem 'capistrano'
 
 
 group :assets do
