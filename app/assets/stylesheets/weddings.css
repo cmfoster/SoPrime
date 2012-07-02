@@ -63,10 +63,10 @@
 	z-index: -1;
 	position:absolute;
 	height: 110%;
-	width:150%;
+	width:300%;
 	background-color:black;
 	opacity:.6;
 	top:0;
-	left:-10%;
+	left:-50%;
 }
 /*END*/
