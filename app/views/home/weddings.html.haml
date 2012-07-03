@@ -25,20 +25,35 @@
 				%h6 Our services
 				%p{:style=>"color:#FFF;font-weight:700;"}
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-
-
-
+		#gallery_container.hide
+			%ul#gallery.unstyled
+				%li
+					= image_tag('dancing.jpg')
+					= image_tag('droppedimage.jpg')
+					= image_tag('droppedimage2.jpg')
+					= image_tag('droppedimage3.jpg')
+					= image_tag('droppedimage4.jpg')
+					= image_tag('girldancing.jpg')
+					= image_tag('more_dancing.jpg')
+					= image_tag('overshot.jpg')
+					= image_tag('requests.jpg')
+					= image_tag('scratch.jpg')
+					= image_tag('speech.jpg')
+					= image_tag('toast.jpg')
+					= image_tag('top_img.jpg')
 
 :javascript
 	$(".menu-tab > a").click(function(){
 		var target_div = $(this).attr('div_tag'); //getting menu content div tag
 		if(!$(target_div).is(':visible')) {
-			$('#menu_content_container > div').hide(); //Hide all visible divs within the menu content container
+			 //Hide all visible divs within the menu content container
+			$('#menu_content_container > div')
+				.not(target_div)
+				.animate({'margin-left': 2000}, 1500)
+				.fadeOut();
 			
 			// Process of animating slide in of content
-			$(target_div).css('margin-left', '2000px');
+			$(target_div).css('margin-left', '2000px')
 			$('#soprime_wedding_container > .overlay').animate({opacity: 0.6}, 1500);
 			$("#wedding-logo").animate({opacity: 0.3}, 500);
 			
@@ -51,6 +66,15 @@
 				.addClass('short_div');
 		}
 	});
+	$('#gallery').galleryView({
+		panel_width: 855,
+		panel_height: 375,
+		panel_scale: 'fit',
+		frame_opacity: 0.9,
+		infobar_opacity: 0.9,
+		show_panel_nav: false,
+		panel_animation: 'crossfade',
+		});
 
 
 
