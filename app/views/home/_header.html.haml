@@ -12,7 +12,7 @@
 		#gallery_container{opacity:0.9;top:-70px;position:absolute;}
 	#side_nav
 		%ul.unstyled.top_nav_links
-			%li.menu-tab
+			%li.menu-tab.active
 				.overlay
 				%a{:div_tag=>"#our_services_container"}
 					Our service
@@ -20,10 +20,10 @@
 				.overlay
 				%a{:div_tag=>"#gallery_container"}
 					Gallery
-			%li.menu-tab
-				.overlay
-				%a{:div_tag=>"#testimonials"}
-					Testimonials
+			-# %li.menu-tab
+			-# 	.overlay
+			-# 	%a{:div_tag=>"#testimonials"}
+			-# 		Testimonials
 			%li.menu-tab
 				.overlay
 				%a{:div_tag=>"#our_djs"}

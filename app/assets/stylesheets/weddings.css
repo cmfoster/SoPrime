@@ -34,10 +34,17 @@
 	left:0;
 	top:67px;
 	position:fixed;
-	overflow:hidden;
+	overflow:visible;
 }
 .top_nav_links{
 	height:100%;
+	padding:50px 0;
+}
+li.menu-tab.selected{
+	width:250px;
+}
+li.menu-tab.selected > .overlay{
+	background-color:royalblue;
 }
 .menu-tab{
 	height:50px;

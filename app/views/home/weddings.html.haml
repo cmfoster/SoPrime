@@ -12,54 +12,32 @@
 	.overlay
 	
 	#menu_content_container
-		#our_services_container.row.hide
-			.our_services.menu_content_div.span3
-				%h6 Our services
-				%p{:style=>"color:#FFF"}
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			.our_services.menu_content_div.span3
-				%h6 Our services
-				%p{:style=>"color:#FFF"}
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.		
-			.our_services.menu_content_div.span3
-				%h6 Our services
-				%p{:style=>"color:#FFF;font-weight:700;"}
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		#gallery_container.hide
-			%ul#gallery.unstyled
-				%li
-					= image_tag('dancing.jpg')
-					= image_tag('droppedimage.jpg')
-					= image_tag('droppedimage2.jpg')
-					= image_tag('droppedimage3.jpg')
-					= image_tag('droppedimage4.jpg')
-					= image_tag('girldancing.jpg')
-					= image_tag('more_dancing.jpg')
-					= image_tag('overshot.jpg')
-					= image_tag('requests.jpg')
-					= image_tag('scratch.jpg')
-					= image_tag('speech.jpg')
-					= image_tag('toast.jpg')
-					= image_tag('top_img.jpg')
+		= render :partial => "home/partials/services"
+		= render :partial => "home/partials/gallery"
+		
+		#our_djs
+			
 
 :javascript
 	$(".menu-tab > a").click(function(){
 		var target_div = $(this).attr('div_tag'); //getting menu content div tag
 		if(!$(target_div).is(':visible')) {
+			$('.top_nav_links > li').not($(this).parent()).removeClass('selected');
+			$(this).parent().addClass('selected');
 			 //Hide all visible divs within the menu content container
 			$('#menu_content_container > div')
 				.not(target_div)
-				.animate({'margin-left': 2000}, 1500)
-				.fadeOut();
+				// .animate({'margin-left': 2000}, 500)
+				.fadeOut(200);
 			
 			// Process of animating slide in of content
 			$(target_div).css('margin-left', '2000px')
-			$('#soprime_wedding_container > .overlay').animate({opacity: 0.6}, 1500);
-			$("#wedding-logo").animate({opacity: 0.3}, 500);
+			$('#soprime_wedding_container > .overlay').animate({opacity: 0.6}, 500);
+			$("#wedding-logo").animate({opacity: 0.3}, 250);
 			
 			$(target_div)
 				.show()
-				.animate({'margin-left': 0}, 1500);
+				.animate({'margin-left': 0}, 500);
 				
 			$(target_div)
 				.children(':last')
@@ -70,8 +48,9 @@
 		panel_width: 855,
 		panel_height: 375,
 		panel_scale: 'fit',
-		frame_opacity: 0.9,
-		infobar_opacity: 0.9,
+		frame_opacity: 0.8,
+		infobar_opacity: 0.8
+		,
 		show_panel_nav: false,
 		panel_animation: 'crossfade',
 		});
