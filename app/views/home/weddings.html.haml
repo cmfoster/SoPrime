@@ -12,33 +12,63 @@
 	.overlay
 	
 	#menu_content_container
-		#our_services_container.hide
-			.our_services.menu_content_div
-				%h6 Our services
-				%p{:style=>"color:#FFF;font-weight:700;"}
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			
+		= render :partial => "home/partials/services"
+		= render :partial => "home/partials/gallery"
+		= render :partial => "home/partials/djs"
 		
-	
-
-
-
-
-
+		#cost_vs_quality.hide
+		
+		#book_us.hide
+			= simple_form_for(@request, :html => {:class => 'form-horizontal well', :style => 'text-align:left' }) do |f|
+				%div{:style => 'display:inline-block;vertical-align:top'}
+					= f.input :fname, :input_html => {:class => 'input-medium'}
+					= f.input :lname, :input_html => {:class => 'input-medium'}
+					= f.input :event_type, :collection => ["Wedding", "Party", "Club", "Corporate"]
+					= f.input :event_city
+					= f.input :event_state
+					= f.input :phone
+				%div{:style => 'display:inline-block;width:400px'}
+					= f.input :start_time, :as => :string, :input_html => {:class => 'date_picker'}
+					= f.input :end_time
 
 :javascript
-	$(".menu-tab > a").click(function(){
-		var target_div = $(this).attr('div_tag');
-		$(target_div).css('margin-left', '2000px');
-		$('#soprime_wedding_container > .overlay').animate({opacity: 0.6}, 1500);
-		$("#wedding-logo").animate({opacity: 0.3}, 500);
-		
-		$(target_div)
-			.show()
-			.animate({'margin-left': 0}, 1500);
-		
+	$(function() {
+		$('.date_picker').timepickr();
 	});
-
+	$(".menu-tab > a").click(function(){
+		var target_div = $(this).attr('div_tag'); //getting menu content div tag
+		if(!$(target_div).is(':visible')) {
+			$('.top_nav_links > li').not($(this).parent()).removeClass('selected');
+			$(this).parent().addClass('selected');
+			 //Hide all visible divs within the menu content container
+			$('#menu_content_container > div')
+				.not(target_div)
+				// .animate({'margin-left': 2000}, 500)
+				.fadeOut(200);
+			
+			// Process of animating slide in of content
+			$(target_div).css('margin-left', '2000px')
+			$('#soprime_wedding_container > .overlay').animate({opacity: 0.6}, 500);
+			$("#wedding-logo").animate({opacity: 0.3}, 250);
+			
+			$(target_div)
+				.show()
+				.animate({'margin-left': 0}, 500);
+			$(target_div)
+				.children(':last')
+				.addClass('short_div');
+		}
+	});
+	$('#gallery').galleryView({
+		panel_width: 855,
+		panel_height: 375,
+		panel_scale: 'fit',
+		frame_opacity: 0.8,
+		infobar_opacity: 0.8
+		,
+		show_panel_nav: false,
+		panel_animation: 'crossfade',
+		});
 
 
 

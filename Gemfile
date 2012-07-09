@@ -7,6 +7,7 @@ gem "twitter-bootstrap-rails"
 gem 'simple_form'
 gem 'haml'
 gem 'capistrano'
+gem 'simple_form'
 
 group :production do
   gem 'rvm-capistrano'
