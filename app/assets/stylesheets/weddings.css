@@ -76,4 +76,18 @@ li.menu-tab.selected > .overlay{
 	top:0;
 	left:-50%;
 }
+
+.dj_bio{
+	height:370px;
+	width:250px;
+}
+#soprime_wedding_container{position:relative;margin-top:60px;}
+#soprime_wedding_container > .overlay{opacity:0}
+#menu_content_container{height:400px;width:900px;position:absolute;top:0;left:150px;padding:25px 0}
+.menu_content_div{border:1px solid #FFF;border-radius:4px;display:inline-block;}
+.our_services{height:370px;width:250px}
+#our_services_container{width:950px;position:relative;}
+.short_div{height:300px; margin-top:70px;}
+#gallery_container{opacity:0.9;top:-70px;position:absolute;}
+#our_djs{width:950px;position:relative;}
 /*END*/

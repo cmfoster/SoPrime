@@ -14,11 +14,27 @@
 	#menu_content_container
 		= render :partial => "home/partials/services"
 		= render :partial => "home/partials/gallery"
+		= render :partial => "home/partials/djs"
 		
-		#our_djs
-			
+		#cost_vs_quality.hide
+		
+		#book_us.hide
+			= simple_form_for(@request, :html => {:class => 'form-horizontal well', :style => 'text-align:left' }) do |f|
+				%div{:style => 'display:inline-block;vertical-align:top'}
+					= f.input :fname, :input_html => {:class => 'input-medium'}
+					= f.input :lname, :input_html => {:class => 'input-medium'}
+					= f.input :event_type, :collection => ["Wedding", "Party", "Club", "Corporate"]
+					= f.input :event_city
+					= f.input :event_state
+					= f.input :phone
+				%div{:style => 'display:inline-block;width:400px'}
+					= f.input :start_time, :as => :string, :input_html => {:class => 'date_picker'}
+					= f.input :end_time
 
 :javascript
+	$(function() {
+		$('.date_picker').timepickr();
+	});
 	$(".menu-tab > a").click(function(){
 		var target_div = $(this).attr('div_tag'); //getting menu content div tag
 		if(!$(target_div).is(':visible')) {
@@ -38,7 +54,6 @@
 			$(target_div)
 				.show()
 				.animate({'margin-left': 0}, 500);
-				
 			$(target_div)
 				.children(':last')
 				.addClass('short_div');
@@ -54,7 +69,6 @@
 		show_panel_nav: false,
 		panel_animation: 'crossfade',
 		});
-
 
 
 

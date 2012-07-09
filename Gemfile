@@ -6,7 +6,7 @@ gem 'sqlite3'
 gem "twitter-bootstrap-rails"
 gem 'simple_form'
 gem 'haml'
-
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
